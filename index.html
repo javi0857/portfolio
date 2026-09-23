@@ -225,7 +225,9 @@
   }
 
   /* ---------- Main content ---------- */
-  main{ padding: 0 0 40px; max-width: 900px; }
+  .main-col{ min-width: 0; }
+  .content-col{ max-width: 900px; width: 100%; margin: 0 auto; min-width: 0; }
+  main{ padding: 0 0 40px; }
   .content-pad{ padding: 0 60px; }
 
   section{ margin-bottom: 76px; scroll-margin-top: 30px; }
@@ -250,6 +252,11 @@
     border-bottom: 1px solid var(--line);
     position: relative;
     overflow: hidden;
+  }
+
+  .hero-inner{
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .hero h2.headline{
@@ -581,9 +588,9 @@
     </div>
   </aside>
 
-  <main>
-
+  <div class="main-col">
     <section id="sobre-mi" class="hero">
+      <div class="hero-inner">
       <h2 class="headline">Construyo el camino que recorren los datos: de la fuente al insight.</h2>
       <p class="lead">Data Engineer con más de 3 años de experiencia desarrollando soluciones de datos en entornos Cloud distribuidos (Azure y AWS), con foco en pipelines ETL escalables, procesamiento distribuido con Apache Spark y arquitecturas Lakehouse sobre Databricks.</p>
 
@@ -672,8 +679,11 @@
 
       </div>
       <p class="etl-hint">Toca un paso para ver sus <span class="mono">tecnologías</span> en detalle</p>
+      </div>
     </section>
 
+    <div class="content-col">
+    <main>
     <div class="content-pad">
 
     <section id="experiencia">
@@ -842,12 +852,14 @@
 
     </div>
   </main>
-</div>
 
-<footer>
-  <span>Javier Álvarez — Data Engineer</span>
-  <a href="mailto:javi0857@gmail.com">javi0857@gmail.com</a>
-</footer>
+  <footer>
+    <span>Javier Álvarez — Data Engineer</span>
+    <a href="mailto:javi0857@gmail.com">javi0857@gmail.com</a>
+  </footer>
+  </div>
+  </div>
+</div>
 
 <script>
   const toggle = document.getElementById('navToggle');
